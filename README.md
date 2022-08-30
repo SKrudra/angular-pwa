@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Run in PWA Mode
+
+Because ng serve does not work with service workers, you must use a separate HTTP server to test your project locally. Use any HTTP server. The following example uses the `http-server` package from npm. To reduce the possibility of conflicts and avoid serving stale content, test on a dedicated port and disable caching.
+
+## Install http-server
+
+Run the below command to install it globally: 
+
+`npm install --global http-server`
+
+
+To serve the directory containing your web files with `http-server`, run the following command:
+
+`http-server -p 8080 -c-1 dist/angular-pwa`
+
+
